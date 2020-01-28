@@ -18,20 +18,24 @@ class Translator{
 		}
 	}
 
-	String decrypt(String s){
+	String encrypt(String s){
+		if(s.length() == 0)
+			return "";
+
 		String message = "";
 		s=s.toLowerCase();
 		for(int i=0;i<s.length();i++){
 			char c=s.charAt(i);
-			if((c>='a' && c<='z') || (c>='0' && c<='9') ){
+			
+			if((c>='a' && c<='z') || (c>='0' && c<='9') )
 				message+=Alphabet.get(str(c))+" ";
-			}
-			else if(c == ' '){
+			
+			else if(c == ' ')
 				message+="   ";
-			}
-			else {
+			
+			else 
 				return "ERROR: illegal character: "+ str(c);
-			}
+			
 		}
 		return message;
 	}
