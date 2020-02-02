@@ -29,7 +29,7 @@ void draw(){
 void keyPressed(){
 	if ((key>='a' && key<='z') || (key>='0' && key<='9') || key == ' ')
 		input+=key;
-	else if (key == ENTER) {
+	else if (key == BACKSPACE) {
 		if(input.length()>0)
 			input = input.substring(0,input.length()-1);
 	}
