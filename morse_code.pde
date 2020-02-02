@@ -28,9 +28,9 @@ float log2(int a){
 }
 
 float entropy(){
-	int[] charmap = new int[128];
+	int[] charmap = new int[128];  //ascii array
 	int diff_chars = 0;
-	float entropy_sum =0;
+	float entropy_sum = 0;
 	for(int i=0;i<input.length();i++)
 		charmap[int(input.charAt(i))]++;
 	
